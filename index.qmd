@@ -1,0 +1,29 @@
+---
+author: "Jobert Richie Nansseu"
+title: "My first page"
+date: "2024-07-23"
+theme: yeti
+---
+
+```{r}
+pacman::p_load(reactable,
+               tidyverse)
+```
+
+:::{.panel-tabset}
+
+## Table
+
+```{r}
+reactable(infert)
+```
+
+## Plot
+
+```{r}
+ggplot(data = infert,
+       mapping = aes(x = parity,
+                     fill = education)) +
+  geom_bar()
+```
+:::
