@@ -1,8 +1,9 @@
 ---
+title: "My second page"
+format: html
+editor: visual
 author: "Jobert Richie Nansseu"
-title: "My first page"
 date: "2024-07-23"
-theme: yeti
 ---
 
 ```{r}
@@ -15,19 +16,19 @@ pacman::p_load(reactable,
 ## Table
 
 ```{r}
-reactable(infert)
+reactable(iris)
 ```
 
 ## Plots
 
 ```{r}
-ggplot(data = infert,
-       mapping = aes(x = parity,
-                     fill = education)) +
+ggplot(data = iris,
+       mapping = aes(x = Species,
+                     fill = Species)) +
   geom_bar()
 ```
 
 ```{r}
-plot(women)
+plot(iris)
 ```
 :::
